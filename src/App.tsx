@@ -1,13 +1,9 @@
 import "./App.css";
-import { useState } from "react";
 import { UseRamdomNumber } from "./hooks/UseRamdomNumber";
 
 
 export const App = () => {
-  const [number, setnumber] = useState<number>();
-  // useEffect(() => {
-  //   getRandomNumberFromApi().then(num=>setnumber(num))
-  // }, [])
+
   const query = UseRamdomNumber();
 
  
@@ -15,7 +11,7 @@ export const App = () => {
   return (
     <>
       {query.isFetching ? <h1>Cargando....</h1> : <h1>Number Ramdom is :{query.data}</h1>}
-      {!query.isLoading && query.isError &&  <h1>"error loading"</h1> }
+      {!query.isLoading && query.isError &&  <h1>"error loading"</h1> } 
     </>
   );
 };
