@@ -5,7 +5,6 @@ import { UseRamdomNumber } from "./hooks/UseRamdomNumber";
 export const App = () => {
 
   const query = UseRamdomNumber();
-
  
 
   return (
